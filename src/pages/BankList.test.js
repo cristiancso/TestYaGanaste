@@ -1,8 +1,10 @@
-import { render } from "@testing-library/react";
-import BankList from "./BankList";
+import { render } from '@testing-library/react';
+import BankList from './BankList';
 
 describe('BankList', () => {
-  it('renders without crashing', () => {
-    render(<BankList />);
+  test('renders without crashing', () => {
+    const { container } = render(<BankList />)
+
+    expect(container).toMatchSnapshot();
   });
 });
